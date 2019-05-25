@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Drag & Drop </title>
+        <style>
+            section{
+                display:inline-block;
+                width:25%;
+                background-color: violet;
+                text-align: center;
+                vertical-align: top;
+                margin-left: 30px;
+            }
+            input{
+                width: 60%;
+                height:30px;
+                padding-left: 10px;
+                margin-bottom: 15px;
+            }
+            .dropArea{
+                min-height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="1stContaioner" ondragenter="dragenter(event)" ondragover="dragover(event)" ondrop="drop(event,this)">
+             <h1> To-do List </h1>
+             <form class="dropArea" ondragenter="dragenter(event)" ondragover="dragover(event)">
+             
+                 <input type="text" id="draggableInput1" draggable="true" placeholder="No1: " ondragstart="drag(event)">
+    
+                 <input type="text" id="draggableInput2" draggable="true" placeholder="No2: "ondragstart="drag(event)">
+
+                 <input type="text" id="draggableInput3" draggable="true" placeholder="No3: "ondragstart="drag(event)">
+
+             </form>
+        </section>
+        <section id="2ndContaioner" ondragenter="dragenter(event)" ondragover="dragover(event)" ondrop="drop(event,this)">
+             <h1> Done List </h1>
+             <form class="dropArea" ondragenter="dragenter(event)" ondragover="dragover(event)">
+
+             </form>
+             
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
